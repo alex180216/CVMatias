@@ -1,0 +1,215 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    position: fixed;
+    z-index: 999999;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+}
+header > nav{
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+header > nav > a{
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    margin: auto;
+}
+header > nav > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 20px);
+    gap: 35px;
+    align-items: center;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+header > nav > ul > li{
+    justify-content: end;
+}
+header > nav > ul > li > a{
+    color: white;
+    margin: auto;
+}
+.mascara{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+/* BLOQUE PRESENTACION */
+
+#base{
+    width: 100%;
+    height: 100%;
+    
+}
+#base > .img-fondo{
+    position: relative;
+}
+#base > .img-fondo > img{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* position: relative; */
+}
+
+/* SIDEBAR */
+#sidebar{
+    position: fixed;
+    right: 34px;
+    top: 25%;
+    z-index: 9999;
+    color: white;
+}
+#sidebar > ul{
+    list-style: none;
+    margin-right: 50px;
+    font-size: 30px;
+}
+
+.active{
+    color: #28ff88;
+}
+
+#base >.img-fondo > .base-info{
+    position: absolute;
+    display: grid;
+    top: 35%;
+    left: 2%;
+    grid-template-columns: 100px minmax(300px, 1000px);
+    gap: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#base >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 80px;
+}
+#base >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#base >.img-fondo > .base-info > .datos > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#base >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#base >.img-fondo > .base-info > .datos > h1 > span{
+    color: #28ff88;
+}
+#base >.img-fondo > .base-info > .datos > .margin-minus{
+    margin-top: -25px;
+}
+#base >.img-fondo > .base-info > .datos > .margen-bajo{
+    border-bottom: #28ff88 4px solid;
+    width: 150px;
+    margin-top: 70px;
+}
+
+/* BLOQUE QUE HAGO */
+#what-i-do{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+#what-i-do > .img-fondo{
+    position: relative;
+    height: 100vh;
+}
+#what-i-do > .img-fondo > .base-info{
+    display: grid;
+    top: 20vh;
+    left: 2%;
+    grid-template-columns: 100px minmax(250px, 400px) minmax(300px, 1000px);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#what-i-do >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#what-i-do >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#what-i-do >.img-fondo > .base-info > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#what-i-do >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#what-i-do >.img-fondo > .base-info > .datos > h1 > span{
+    color: #28ff88;
+}
+#what-i-do >.img-fondo > .base-info > .datos > .descripcion{
+    margin-top: 20%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: gray;
+}
+#what-i-do >.img-fondo > .base-info > .habilidades{
+    margin-left: 30px;
+}
+#what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress{
+    width: 75%;
+    height: 8px;
+}
+#what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress > .progress-bar{
+    background-color: #28ff88;
+}
+#what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel{
+    display: grid;
+    grid-template-columns: auto 30px;
+    width: 75%;
+    margin-bottom: -13px;
+}
