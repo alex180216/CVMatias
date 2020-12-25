@@ -523,15 +523,16 @@ header > nav > ul > li > a{
 }
 #empresas > .img-fondo > .base-info{
     display: grid;
-    top: 20vh;
+    top: 30vh;
     left: 2%;
-    grid-template-columns: 100px minmax(250px, 400px) minmax(300px, 1000px);
+    grid-template-columns: 100px minmax(250px, 1500px);
     height: auto;
     gap: 20px;
     color: white;
     justify-content: center;
     align-items: center;
     position: absolute;
+    width: 100%;
 }
 #empresas >.img-fondo > .base-info > .titulo{
     transform: rotate(-90deg);
@@ -545,42 +546,11 @@ header > nav > ul > li > a{
     letter-spacing: 1px;
     width: max-content;
 }
-#empresas >.img-fondo > .base-info > .datos > p:nth-child(1){
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-#empresas >.img-fondo > .base-info > .datos > h1{
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-#empresas >.img-fondo > .base-info > .datos > h1 > span{
-    color: var(--color-detalle);
-}
-#empresas >.img-fondo > .base-info > .datos > .descripcion{
-    margin-top: 20%;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    font-size: 15px;
-    color: gray;
-}
-#empresas >.img-fondo > .base-info > .habilidades{
-    margin-left: 30px;
-}
-#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress{
-    width: 75%;
-    height: 8px;
-}
-#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress > .progress-bar{
-    background-color: var(--color-detalle);
-}
-#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel{
+#empresas >.img-fondo > .base-info > .datos{
     display: grid;
-    grid-template-columns: auto 30px;
-    width: 75%;
-    margin-bottom: -13px;
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    gap: 20px;
+}
+#empresas >.img-fondo > .base-info > .datos > .item > img{
+    width: 100%;
 }
