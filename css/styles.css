@@ -117,7 +117,7 @@ header > nav > ul > li > a{
 }
 #base >.img-fondo > .base-info > .datos > p{
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -176,7 +176,7 @@ header > nav > ul > li > a{
 }
 #what-i-do >.img-fondo > .base-info > .datos > p:nth-child(1){
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -273,4 +273,100 @@ header > nav > ul > li > a{
     height: 100%;
     border: white 3px solid;
     
+}
+#experiencia >.img-fondo > .base-info > .datos > a{
+    text-decoration: none;
+    color: white;
+    
+}
+#experiencia >.img-fondo > .base-info > .datos > a > h1{
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+/* BLOQUE SERVICIOS */
+
+#servicios{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+#servicios > .img-fondo{
+    position: relative;
+    height: 100vh;
+}
+#servicios > .img-fondo > .base-info{
+    display: grid;
+    top: 20vh;
+    left: 2%;
+    grid-template-columns: 100px minmax(250px, 400px) minmax(300px, 1000px);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    position: absolute;
+}
+#servicios >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#servicios >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#servicios >.img-fondo > .base-info > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#servicios >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#servicios >.img-fondo > .base-info > .datos > h1 > span{
+    color: #28ff88;
+}
+#servicios >.img-fondo > .base-info > .datos > .descripcion{
+    margin-top: 20%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: gray;
+}
+#servicios >.img-fondo > .base-info > .datos > .descripcion > ol > li{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+#servicios >.img-fondo > .base-info > .tiempo > img{
+    width: 70%;
+    height: 350px;/*  DEBE CAMBIARSE */
+    position: relative;
+}
+#servicios >.img-fondo > .base-info > .tiempo > .dato{
+    display: grid;
+    position: absolute;
+    top: 250px;
+    grid-template-columns: repeat(2, minmax(80px, 100%));
+    align-items: center;
+    margin-left: 30px;
+}
+#servicios >.img-fondo > .base-info > .tiempo > .dato > p:nth-child(1){
+    font-size: 160px;
+    font-weight: 600;
+    text-shadow: 1px 1px rgba(68, 66, 66, 0.411);
+}
+#servicios >.img-fondo > .base-info > .tiempo > .dato > p:nth-child(2){
+    font-size: 25px;
+    width: 100px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-top: 50px;
 }
