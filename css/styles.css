@@ -54,20 +54,20 @@ header > nav > ul > li > a{
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.363);
 }
 
 /* BLOQUE PRESENTACION */
 
-#base{
+#base, #experiencia{
     width: 100%;
     height: 100%;
     
 }
-#base > .img-fondo{
+#base > .img-fondo, #experiencia > .img-fondo{
     position: relative;
 }
-#base > .img-fondo > img{
+#base > .img-fondo > img, #experiencia > .img-fondo > img{
     top: 0;
     width: 100%;
     height: 100vh;
@@ -212,4 +212,65 @@ header > nav > ul > li > a{
     grid-template-columns: auto 30px;
     width: 75%;
     margin-bottom: -13px;
+}
+
+/* BLOQUE EXPERIENCIA */
+#experiencia >.img-fondo > .base-info{
+    position: absolute;
+    display: grid;
+    top: 20vh;
+    left: 2%;
+    grid-template-columns: 100px minmax(300px, 1000px);
+    gap: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#experiencia >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    margin-top: -165px;
+}
+#experiencia >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#experiencia >.img-fondo > .base-info > .datos > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#experiencia >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#experiencia >.img-fondo > .base-info > .datos > h1 > span{
+    color: #28ff88;
+}
+#experiencia >.img-fondo > .base-info > .datos > .margin-minus{
+    margin-top: -25px;
+}
+#experiencia >.img-fondo > .base-info > .datos > .margen-bajo{
+    border-bottom: #28ff88 4px solid;
+    width: 150px;
+    margin-top: 70px;
+}
+#experiencia >.img-fondo > .base-info > .datos > .grilla-jobs{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 260px));
+    gap: 30px;
+}
+#experiencia >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items{
+    width: 100%;
+    height: 100%;
+    border: white 3px solid;
+    
 }
