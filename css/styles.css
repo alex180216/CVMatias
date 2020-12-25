@@ -3,6 +3,10 @@
     margin: 0px;
     text-decoration: none;
 }
+:root{
+    --color-detalle: #28ff88;
+    --background-secciones-oscuras:rgba(0, 0, 0, 0.842); 
+}
 
 /* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -59,15 +63,15 @@ header > nav > ul > li > a{
 
 /* BLOQUE PRESENTACION */
 
-#base, #experiencia{
+#base, #experiencia, #resume{
     width: 100%;
     height: 100%;
     
 }
-#base > .img-fondo, #experiencia > .img-fondo{
+#base > .img-fondo, #experiencia > .img-fondo, #resume > .img-fondo{
     position: relative;
 }
-#base > .img-fondo > img, #experiencia > .img-fondo > img{
+#base > .img-fondo > img, #experiencia > .img-fondo > img, #resume > .img-fondo > img{
     top: 0;
     width: 100%;
     height: 100vh;
@@ -89,7 +93,7 @@ header > nav > ul > li > a{
 }
 
 .active{
-    color: #28ff88;
+    color: var(--color-detalle);
 }
 
 #base >.img-fondo > .base-info{
@@ -129,13 +133,13 @@ header > nav > ul > li > a{
     text-transform: uppercase;
 }
 #base >.img-fondo > .base-info > .datos > h1 > span{
-    color: #28ff88;
+    color: var(--color-detalle);
 }
 #base >.img-fondo > .base-info > .datos > .margin-minus{
     margin-top: -25px;
 }
 #base >.img-fondo > .base-info > .datos > .margen-bajo{
-    border-bottom: #28ff88 4px solid;
+    border-bottom: var(--color-detalle) 4px solid;
     width: 150px;
     margin-top: 70px;
 }
@@ -144,7 +148,7 @@ header > nav > ul > li > a{
 #what-i-do{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: var(--background-secciones-oscuras);
 }
 #what-i-do > .img-fondo{
     position: relative;
@@ -188,7 +192,7 @@ header > nav > ul > li > a{
     text-transform: uppercase;
 }
 #what-i-do >.img-fondo > .base-info > .datos > h1 > span{
-    color: #28ff88;
+    color: var(--color-detalle);
 }
 #what-i-do >.img-fondo > .base-info > .datos > .descripcion{
     margin-top: 20%;
@@ -205,7 +209,7 @@ header > nav > ul > li > a{
     height: 8px;
 }
 #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress > .progress-bar{
-    background-color: #28ff88;
+    background-color: var(--color-detalle);
 }
 #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel{
     display: grid;
@@ -220,7 +224,7 @@ header > nav > ul > li > a{
     display: grid;
     top: 20vh;
     left: 2%;
-    grid-template-columns: 100px minmax(300px, 1000px);
+    grid-template-columns: 100px minmax(300px, 750px);
     gap: 50px;
     color: white;
     justify-content: center;
@@ -253,13 +257,13 @@ header > nav > ul > li > a{
     text-transform: uppercase;
 }
 #experiencia >.img-fondo > .base-info > .datos > h1 > span{
-    color: #28ff88;
+    color: var(--color-detalle);
 }
 #experiencia >.img-fondo > .base-info > .datos > .margin-minus{
     margin-top: -25px;
 }
 #experiencia >.img-fondo > .base-info > .datos > .margen-bajo{
-    border-bottom: #28ff88 4px solid;
+    border-bottom: var(--color-detalle) 4px solid;
     width: 150px;
     margin-top: 70px;
 }
@@ -289,7 +293,7 @@ header > nav > ul > li > a{
 #servicios{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.842);
+    background-color: var(--background-secciones-oscuras);
 }
 #servicios > .img-fondo{
     position: relative;
@@ -308,7 +312,7 @@ header > nav > ul > li > a{
 }
 #servicios >.img-fondo > .base-info > .titulo{
     transform: rotate(-90deg);
-    margin-left: 430px;
+    margin-left: 430px; /* SOLO PARA ESTE CASO */
     margin-top: -300px;
 }
 #servicios >.img-fondo > .base-info > .titulo > p{
@@ -333,7 +337,7 @@ header > nav > ul > li > a{
     text-transform: uppercase;
 }
 #servicios >.img-fondo > .base-info > .datos > h1 > span{
-    color: #28ff88;
+    color: var(--color-detalle);
 }
 #servicios >.img-fondo > .base-info > .datos > .descripcion{
     margin-top: 20%;
@@ -370,4 +374,141 @@ header > nav > ul > li > a{
     text-transform: uppercase;
     font-weight: 500;
     padding-top: 50px;
+}
+/* BLOQUE RESUME */
+#resume >.img-fondo > .mascara{
+    width: 100vw;
+    height: 100vh;
+}
+#resume >.img-fondo > .base-info{ /* LA UNICA IMEGEN QUE DEBE TRAER UNA MASCARA */
+    background: url(../img/img-background.png) no-repeat center center fixed;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 100px minmax(300px, 1000px);
+    gap: 50px;
+    color: white;
+    align-items: baseline;
+    padding-top: 13%;
+   /*  padding-left: 2%; */
+    width: 100%;
+}
+
+#resume >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-right: 160px;
+}
+#resume >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#resume >.img-fondo > .base-info > .datos {
+
+}
+#resume >.img-fondo > .base-info > .datos > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#resume >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#resume >.img-fondo > .base-info > .datos > h1 > span{
+    color: var(--color-detalle);
+}
+#resume >.img-fondo > .base-info > .datos > .margin-minus{
+    margin-top: -25px;
+}
+#resume >.img-fondo > .base-info > .datos > .margen-bajo{
+    border-bottom: var(--color-detalle) 4px solid;
+    width: 150px;
+    margin-top: 70px;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 420px));
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.342);    
+}
+#resume >.img-fondo > .base-info > .datos > a{
+    text-decoration: none;
+    color: white;
+    
+}
+#resume >.img-fondo > .base-info > .datos > a > h1{
+    font-size: 22px;
+    margin-top: 40px;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > p{
+    background-color: #28ff8994;
+    color: rgba(22, 22, 22, 0.788);
+    padding: 14px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul{
+    position: relative;
+    list-style: none;
+    
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul > li {
+    padding-left: 5.7%;
+    border-left: 1px solid rgba(104, 104, 104, 0.705);
+    padding-right: 7%;
+    padding-bottom: 2%;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul > li:before {
+    position: absolute;
+    content: '';
+    left: 5.7%;
+    width: 1rem;
+    height: 1rem;
+    background: #0e0e0e;
+    border-radius: 50%;
+    border: 2px solid var(--color-detalle);
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul > li > h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .lugar{
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .fecha{
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: var(--color-detalle);
+    letter-spacing: 1px;
+}
+#resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .descripcion{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+    line-height: 27px;
+    text-align: justify;
 }
