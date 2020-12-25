@@ -308,7 +308,8 @@ header > nav > ul > li > a{
 }
 #servicios >.img-fondo > .base-info > .titulo{
     transform: rotate(-90deg);
-    padding-left: 110px;
+    margin-left: 430px;
+    margin-top: -300px;
 }
 #servicios >.img-fondo > .base-info > .titulo > p{
     font-family: 'Poppins', sans-serif;
