@@ -384,9 +384,7 @@ header > nav > ul > li > a{
     background: url(../img/img-background.png) no-repeat center center fixed;
         background-size: cover;
         -moz-background-size: cover;
-        -webkit-background-size: cover;
         -o-background-size: cover;
-    position: absolute;
     display: grid;
     grid-template-columns: 100px minmax(300px, 1000px);
     gap: 50px;
@@ -409,7 +407,8 @@ header > nav > ul > li > a{
     letter-spacing: 1px;
 }
 #resume >.img-fondo > .base-info > .datos {
-
+    padding-bottom: 5px;
+    margin-bottom: 100px;
 }
 #resume >.img-fondo > .base-info > .datos > p{
     font-family: 'Poppins', sans-serif;
@@ -511,4 +510,77 @@ header > nav > ul > li > a{
     color: rgb(209, 209, 209);
     line-height: 27px;
     text-align: justify;
+}
+/* BLOQUE EMPRESAS */
+#empresas{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-secciones-oscuras);
+}
+#empresas > .img-fondo{
+    position: relative;
+    height: 100vh;
+}
+#empresas > .img-fondo > .base-info{
+    display: grid;
+    top: 20vh;
+    left: 2%;
+    grid-template-columns: 100px minmax(250px, 400px) minmax(300px, 1000px);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#empresas >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#empresas >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#empresas >.img-fondo > .base-info > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#empresas >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#empresas >.img-fondo > .base-info > .datos > h1 > span{
+    color: var(--color-detalle);
+}
+#empresas >.img-fondo > .base-info > .datos > .descripcion{
+    margin-top: 20%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: gray;
+}
+#empresas >.img-fondo > .base-info > .habilidades{
+    margin-left: 30px;
+}
+#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress{
+    width: 75%;
+    height: 8px;
+}
+#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress > .progress-bar{
+    background-color: var(--color-detalle);
+}
+#empresas >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel{
+    display: grid;
+    grid-template-columns: auto 30px;
+    width: 75%;
+    margin-bottom: -13px;
 }
