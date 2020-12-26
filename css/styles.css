@@ -72,6 +72,7 @@ header > nav > ul > li > a{
 }
 #base > .img-fondo, #experiencia > .img-fondo, #resume > .img-fondo, #testimonio > .img-fondo{
     position: relative;
+    width: auto;
 }
 #base > .img-fondo > img, #experiencia > .img-fondo > img, #resume > .img-fondo > img, #testimonio > .img-fondo > img{
     top: 0;
@@ -691,7 +692,7 @@ header > nav > ul > li > a{
 #contacto >.img-fondo > .base-info > .datos > .formulario{
     margin-top: 10vh;
 }
-#contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form >.nombre-email > .col >.form-control,
 #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input,
 #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea{
     background-color: var(--background-inputs);
@@ -699,7 +700,7 @@ header > nav > ul > li > a{
     font-size: 12px;
     color: gray;
 }
-#contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control:focus,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form >.nombre-email > .col >.form-control:focus,
 #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input:focus,
 #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea:focus{
     border: 3px solid #28ff88;
@@ -720,6 +721,662 @@ header > nav > ul > li > a{
 
 
 /* MEDIA QUERIES */
+@media screen and (max-width:400px){
+    #sidebar{
+        display: none;
+    }
+    header{
+        width: 100vw;
+    }
+    .list-contact{
+        display: none;
+    }
+    header > nav {
+        display: grid;
+        grid-template-columns: 85% 15%;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #base >.img-fondo > .base-info{
+        top: 35%;
+        left: 5%;
+        grid-template-columns: 80vw;
+        gap: 20px;
+    }
+    #base >.img-fondo > .base-info > .datos > .margin-minus {
+        margin-top: -10px;
+    }
+    #base >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+        display: none;
+    }
+    #base >.img-fondo > .base-info > .datos > h1 {
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #what-i-do > .img-fondo{
+        height: 180vh;
+    }
+    #what-i-do > .img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 7vw;
+    }
+    #what-i-do >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+        display: none;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades{
+        margin-left: 30px;
+        width: 80vw;
+    }
+    #what-i-do >.img-fondo > .base-info > .datos > .descripcion{
+        margin-top: 7%;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-size: 15px;
+        color: gray;
+        text-align: justify;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress {
+        width: 85%;
+        height: 8px;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel {
+        display: grid;
+        grid-template-columns: auto 30px;
+        width: 85%;
+        margin-bottom: -13px;
+    }
+    #experiencia > .img-fondo,  #experiencia > .img-fondo > img{
+        height: 220vh;
+    }
+    #experiencia >.img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10vw;
+    }
+    #experiencia >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > .grilla-jobs{
+        display: grid;
+        grid-template-columns: 70vw;
+        gap: 30px;
+        margin-top: 10px;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > p {
+        font-size: 26px;
+    }
+    #servicios{
+        height: 190vh;
+    }
+    #servicios > .img-fondo > .base-info{
+        /* display: grid;
+        top: 20vh;
+        left: 2%; */
+        grid-template-columns: 80vw;
+        height: auto;
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        position: absolute;
+        margin-left: 7vw;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-top: 25%;
+    }
+    #servicios >.img-fondo > .base-info > .datos{
+        width: 80%;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #servicios >.img-fondo > .base-info > .datos > .descripcion {
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo{
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato{
+        top: 93%;
+        grid-template-columns: repeat(2, minmax(80px, 100%));
+        align-items: center;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > img{
+        width: 100%;
+        height: 350px;/*  DEBE CAMBIARSE */
+        position: relative;
+    }
+    #resume >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #resume >.img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        gap: 50px;
+        justify-content: center;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs{
+        grid-template-columns: minmax(150px, 90vw);
+    }
+    #empresas >.img-fondo > .base-info > .titulo {
+        display: none;
+    }
+    #empresas > .img-fondo > .base-info{
+        grid-template-columns: 90vw;
+
+    }
+    #empresas >.img-fondo > .base-info > .datos{
+        grid-template-columns: 80vw;
+        margin-left: 7vw;
+    }
+    #testimonio{
+        height: 175vh;
+    }
+    #testimonio >.img-fondo > img{
+        height: 175vh;
+    }
+    #testimonio >.img-fondo > .base-info{
+        grid-template-columns: 90vw;
+        justify-content: center;
+    }
+    #testimonio >.img-fondo > .base-info > .titulo {
+        display: none;
+    }
+    #testimonio >.img-fondo > .base-info > .datos {
+        display: grid;
+        grid-template-columns: 70vw;
+        gap: 20px;
+        justify-content: center;
+        margin-left: 5vw;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .controles{
+        margin-top: 0;
+    }
+    #contacto{
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-secciones-oscuras);
+    }
+    #contacto > .img-fondo{
+        position: relative;
+        height: 100vh;
+    }
+    #contacto > .img-fondo > .base-info{
+        grid-template-columns: 95vw;
+        justify-content: center;
+        align-items: center;
+    }
+    #contacto >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    
+    #contacto >.img-fondo > .base-info > .datos {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    #contacto >.img-fondo > .base-info > .datos > h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario{
+        margin-top: 5vh;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .nombre-email > .col{
+        margin-bottom: 2vh;
+    }
+    #testimonio >.img-fondo > .base-info{
+        position: absolute;
+        display: grid;
+        top: 15%;
+        left: 2%;
+        grid-template-columns: 90vw;
+        gap: 30px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul > li:before {
+        position: absolute;
+        content: '';
+        left: 8%;
+        width: 1rem;
+        height: 1rem;
+        background: #0e0e0e;
+        border-radius: 50%;
+        border: 2px solid var(--color-detalle);
+    }
+    #empresas > .img-fondo {
+        position: relative;
+        height: 170vh;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato > p:nth-child(1) {
+        font-size: 100px;
+        font-weight: 600;
+        text-shadow: 1px 1px rgba(68, 66, 66, 0.411);
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato > p:nth-child(2) {
+        font-size: 15px;
+        width: 100px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-top: 50px;
+    }
+}
+@media (min-width:400px) and (max-width:900px) {
+    #sidebar{
+        display: none;
+    }
+    header{
+        width: 100vw;
+    }
+    .list-contact{
+        display: none;
+    }
+    header > nav {
+        display: grid;
+        grid-template-columns: 85% 15%;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #base >.img-fondo > .base-info{
+        top: 35%;
+        left: 5%;
+        grid-template-columns: 80vw;
+        gap: 20px;
+    }
+    #base >.img-fondo > .base-info > .datos > .margin-minus {
+        margin-top: -10px;
+    }
+    #base >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+        display: none;
+    }
+    #base >.img-fondo > .base-info > .datos > h1 {
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #what-i-do > .img-fondo{
+        height: 130vh;
+    }
+    #what-i-do > .img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 7vw;
+    }
+    #what-i-do >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+        display: none;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades{
+        margin-left: 30px;
+        width: 80vw;
+    }
+    #what-i-do >.img-fondo > .base-info > .datos > .descripcion{
+        margin-top: 7%;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-size: 15px;
+        color: gray;
+        text-align: justify;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .progress {
+        width: 85%;
+        height: 8px;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel {
+        display: grid;
+        grid-template-columns: auto 30px;
+        width: 85%;
+        margin-bottom: -13px;
+    }
+    #experiencia > .img-fondo,  #experiencia > .img-fondo > img{
+        height: 160vh;
+    }
+    #experiencia >.img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10vw;
+    }
+    #experiencia >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > .grilla-jobs{
+        display: grid;
+        grid-template-columns: 70vw;
+        gap: 30px;
+        margin-top: 10px;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > p {
+        font-size: 26px;
+    }
+    #servicios{
+        height: 160vh;
+    }
+    #servicios > .img-fondo > .base-info{
+        /* display: grid;
+        top: 20vh;
+        left: 2%; */
+        grid-template-columns: 80vw;
+        height: auto;
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        position: absolute;
+        margin-left: 7vw;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-top: 25%;
+    }
+    #servicios >.img-fondo > .base-info > .datos{
+        width: 80%;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #servicios >.img-fondo > .base-info > .datos > .descripcion {
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo{
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato{
+        top: 85%;
+        grid-template-columns: repeat(2, minmax(80px, 100%));
+        align-items: center;
+        margin-left: 15vw;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > img{
+        width: 100%;
+        height: 350px;/*  DEBE CAMBIARSE */
+        position: relative;
+    }
+    #resume >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    #resume >.img-fondo > .base-info{
+        grid-template-columns: 80vw;
+        gap: 50px;
+        justify-content: center;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs{
+        grid-template-columns: minmax(150px, 90vw);
+    }
+    #empresas >.img-fondo > .base-info > .titulo {
+        display: none;
+    }
+    #empresas > .img-fondo > .base-info{
+        grid-template-columns: 90vw;
+
+    }
+    #empresas >.img-fondo > .base-info > .datos{
+        grid-template-columns: repeat(2, minmax(100px, 50%));
+        margin-left: 5vw;
+    }
+    #testimonio{
+        height: 160vh;
+    }
+    #testimonio >.img-fondo > img{
+        height: 160vh;
+    }
+    #testimonio >.img-fondo > .base-info{
+        grid-template-columns: 90vw;
+        justify-content: center;
+    }
+    #testimonio >.img-fondo > .base-info > .titulo {
+        display: none;
+    }
+    #testimonio >.img-fondo > .base-info > .datos {
+        display: grid;
+        grid-template-columns: 70vw;
+        gap: 20px;
+        justify-content: center;
+        margin-left: 5vw;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .controles{
+        margin-top: 0;
+    }
+    #contacto{
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-secciones-oscuras);
+    }
+    #contacto > .img-fondo{
+        position: relative;
+        height: 100vh;
+    }
+    #contacto > .img-fondo > .base-info{
+        grid-template-columns: 95vw;
+        justify-content: center;
+        align-items: center;
+    }
+    #contacto >.img-fondo > .base-info > .titulo{
+        display: none;
+    }
+    
+    #contacto >.img-fondo > .base-info > .datos {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    #contacto >.img-fondo > .base-info > .datos > h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario{
+        margin-top: 5vh;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .nombre-email > .col{
+        margin-bottom: 2vh;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form >.nombre-email > .col >.form-control,
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input,
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea{
+        background-color: var(--background-inputs);
+        border: none;
+        font-size: 15px;
+        color: gray;
+    }
+}
+@media (min-width: 900px) and (max-width:1100px) {
+    #base > .img-fondo > img, #experiencia > .img-fondo > img, #resume > .img-fondo > img, #testimonio > .img-fondo > img{
+        height: 120vh;
+    }
+    #base >.img-fondo > .base-info{
+        top: 35%;
+        left: 2%;
+        grid-template-columns: 100px minmax(300px, 600px);
+        gap: 20px;
+    }
+    #base >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+    }
+    #base >.img-fondo > .base-info > .datos > h1{
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #base >.img-fondo > .base-info > .datos > .margin-minus{
+        margin-top: 0;
+    }
+    #what-i-do > .img-fondo{
+        height: 120vh;
+    }
+    #what-i-do > .img-fondo > .base-info{
+        grid-template-columns: 100px minmax(250px, 70vw);
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #what-i-do >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades{
+        margin-left: 30px;
+        grid-column: 2/3;
+        width: 80vw;
+    }
+    #what-i-do >.img-fondo > .base-info > .datos > .descripcion{
+        margin-top: 7%;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+        font-size: 15px;
+        color: gray;
+        text-align: justify;
+    }
+    #experiencia >.img-fondo > .base-info{
+        grid-template-columns: 100px minmax(300px, 70vw);
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+    #experiencia >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-left: 40%;
+        padding-top: 50%;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > .grilla-jobs{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 70vw));
+        gap: 30px;
+        margin-top: 80px;
+    }
+    #servicios{
+        height: 150vh;
+    }
+    #servicios > .img-fondo > .base-info{
+        /* display: grid;
+        top: 20vh;
+        left: 2%; */
+        grid-template-columns: 100px minmax(300px, 90vh);
+        height: auto;
+        gap: 20px;
+        color: white;
+        justify-content: center;
+        position: absolute;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        padding-top: 25%;
+    }
+    #servicios >.img-fondo > .base-info > .datos{
+        width: 80%;
+    }
+    #servicios >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+        margin-left: 320px;/* SOLO PARA ESTE CASO */
+        margin-top: -220px;
+    }
+    #servicios >.img-fondo > .base-info > .datos > .descripcion {
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo{
+        grid-column: 2/3;
+        margin-top: 5%;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato{
+        top: 85%;
+        grid-template-columns: repeat(2, minmax(80px, 100%));
+        align-items: center;
+        margin-left: 15vw;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > img{
+        width: 100%;
+        height: 350px;/*  DEBE CAMBIARSE */
+        position: relative;
+    }
+    #resume >.img-fondo > .base-info > .titulo{
+        transform: rotate(-90deg);
+    }
+    #resume >.img-fondo > .base-info{
+        grid-template-columns: 100px minmax(300px, 70vw);
+        gap: 50px;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs{
+        grid-template-columns: minmax(150px, 90vw);
+    }
+    #empresas > .img-fondo > .base-info{
+        grid-template-columns: 100px minmax(250px, 70vw);
+    }
+    #empresas >.img-fondo > .base-info > .datos{
+        grid-template-columns: repeat(2, minmax(100px, 50%));
+    }
+    #testimonio{
+        height: 150vh;
+    }
+    #testimonio >.img-fondo > img{
+        height: 150vh;
+    }
+    #testimonio >.img-fondo > .base-info{
+        grid-template-columns: 100px minmax(300px, 70vw);
+    }
+
+    #testimonio >.img-fondo > .base-info > .datos {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(280px, 100%));
+        gap: 20px;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .controles{
+        margin-top: 0;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .nombre-email{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 40vw));
+        gap: 10px;
+    }
+}
+@media (min-width:1100px) and (max-width: 1325px){
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .nombre-email{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 40vw));
+        gap: 10px;
+    }
+}
+
 @media screen and (min-width: 1325px) {
     #base >.img-fondo > .base-info{
         top: 35%;
@@ -888,13 +1545,18 @@ header > nav > ul > li > a{
         margin-left: 10vw;
         margin-right: 10vw;
     }
-    #contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control,
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form >.nombre-email > .col >.form-control,
     #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input,
     #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea{
         background-color: var(--background-inputs);
         border: none;
         font-size: 15px;
         color: gray;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .nombre-email{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 40vw));
+        gap: 20px;
     }
 }
 @media screen and (min-width: 1525px) {
