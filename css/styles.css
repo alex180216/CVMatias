@@ -7,6 +7,7 @@
     --color-detalle: #28ff88;
     --background-secciones-oscuras:rgba(0, 0, 0, 0.842);
     --mascara: rgba(0, 0, 0, 0.466);
+    --background-inputs:rgba(65, 65, 65, 0.842);
 }
 
 /* FUENTES */
@@ -201,6 +202,7 @@ header > nav > ul > li > a{
     letter-spacing: 1px;
     font-size: 15px;
     color: gray;
+    text-align: justify;
 }
 #what-i-do >.img-fondo > .base-info > .habilidades{
     margin-left: 30px;
@@ -272,12 +274,23 @@ header > nav > ul > li > a{
     display: grid;
     grid-template-columns: repeat(3, minmax(150px, 260px));
     gap: 30px;
+    margin-top: 80px;
 }
 #experiencia >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items{
     width: 100%;
     height: 100%;
     border: white 3px solid;
-    
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+#experiencia >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > h5{
+    font-weight: 700;
+}
+#experiencia >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items:hover{
+    background-color: var(--color-detalle);
+    color: black;
 }
 #experiencia >.img-fondo > .base-info > .datos > a{
     text-decoration: none;
@@ -615,7 +628,7 @@ header > nav > ul > li > a{
     grid-template-columns: repeat(2, 70px);
     justify-content: center;
     gap: 5px;
-    margin-top: 30%;
+    margin-top: 100px;
 }
 #testimonio >.img-fondo > .base-info > .datos > .columna2 > .controles > a{
     text-decoration: none;
@@ -629,4 +642,278 @@ header > nav > ul > li > a{
 .enciende-control{
     background-color: var(--color-detalle);
     color: black;
+}
+/* BLOQUE CONTACTO */
+#contacto{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-secciones-oscuras);
+}
+#contacto > .img-fondo{
+    position: relative;
+    height: 100vh;
+}
+#contacto > .img-fondo > .base-info{
+    display: grid;
+    top: 20vh;
+    left: 2%;
+    grid-template-columns: 100px minmax(250px, 80vw);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+#contacto >.img-fondo > .base-info > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 80px;
+}
+#contacto >.img-fondo > .base-info > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#contacto >.img-fondo > .base-info > .datos {
+    margin-left: 5vw;
+    margin-right: 10vw;
+}
+#contacto >.img-fondo > .base-info > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#contacto >.img-fondo > .base-info > .datos > .formulario{
+    margin-top: 10vh;
+}
+#contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea{
+    background-color: var(--background-inputs);
+    border: none;
+    font-size: 12px;
+    color: gray;
+}
+#contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control:focus,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input:focus,
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea:focus{
+    border: 3px solid #28ff88;
+}
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > button{
+    background-color: var(--color-detalle);
+    font-size: 14px;
+    color: var(--background-secciones-oscuras);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#contacto >.img-fondo > .base-info > .datos > .formulario > form > button:hover{
+    background-color: var(--background-secciones-oscuras);
+    font-size: 14px;
+    color: var(--color-detalle);
+    font-weight: 700;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1325px) {
+    #base >.img-fondo > .base-info{
+        top: 35%;
+        left: 4%;
+        grid-template-columns: 100px minmax(300px, 1200px);
+        gap: 80px;
+    } 
+    #base >.img-fondo > .base-info > .datos > p{
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #base >.img-fondo > .base-info > .datos > h1{
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    #what-i-do > .img-fondo > .base-info{
+        top: 20vh;
+        left: 4%;
+        grid-template-columns: 100px minmax(250px, 600px) minmax(300px, 800px);
+        gap: 40px;
+
+    }
+    #what-i-do >.img-fondo > .base-info > .datos > p:nth-child(1){
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    } 
+    #what-i-do >.img-fondo > .base-info > .datos > h1{
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #what-i-do >.img-fondo > .base-info > .datos > .descripcion{
+        margin-top: 15%;
+        letter-spacing: 1px;
+        font-size: 20px;
+        text-align: justify;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel{
+        grid-template-columns: 85% 15%;
+        width: 80%;
+    }
+    #what-i-do >.img-fondo > .base-info > .habilidades > .lista-progress > .item > .nivel > p{
+        font-size: 20px;
+    }
+    #experiencia >.img-fondo > .base-info{
+        top: 20vh;
+        left: 4%;
+        grid-template-columns: 100px minmax(300px, 80vw);
+        gap: 80px;
+    }  
+    #experiencia >.img-fondo > .base-info > .datos > .grilla-jobs{
+        grid-template-columns: repeat(4, minmax(180px, 20%));
+        gap: 30px;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > p{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    #experiencia >.img-fondo > .base-info > .datos > a > h1{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    
+    #servicios >.img-fondo > .base-info > .datos > p:nth-child(1){
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #servicios >.img-fondo > .base-info > .datos > h1{
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > img{
+        width: 80%;
+        height: 450px;/*  DEBE CAMBIARSE */
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > .dato{
+        top: 350px;
+        grid-template-columns: repeat(2, minmax(120px, 100%));
+        align-items: center;
+        margin-left: 30px;
+    }
+    #resume >.img-fondo > .base-info{ /* LA UNICA IMEGEN QUE DEBE TRAER UNA MASCARA */
+        background: url(../img/img-background.png) no-repeat center center fixed;
+            background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        display: grid;
+        grid-template-columns: 100px minmax(300px, 80%);
+        gap: 50px;
+        color: white;
+        align-items: baseline;
+        padding-top: 13%;
+       /*  padding-left: 2%; */
+        width: 100%;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 90%));
+        gap: 30px;
+        font-family: 'Poppins', sans-serif;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > p{
+        font-size: 22px;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > ul > li > h3{
+        font-size: 20px;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .lugar{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .fecha{
+        font-size: 16px;
+        color: var(--color-detalle);
+        letter-spacing: 1px;
+    }
+    #resume >.img-fondo > .base-info > .datos > .grilla-jobs > .grilla-items > .item > li > .descripcion{
+        font-size: 16px;
+    }
+    #empresas > .img-fondo > .base-info{
+        left: 4%;
+        grid-template-columns: 100px minmax(250px, 1400px);
+        height: auto;
+        gap: 40px;
+        color: white;
+    }
+    #empresas >.img-fondo > .base-info > .datos{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 25%));
+        gap: 30px;
+    }
+    #testimonio >.img-fondo > .base-info{
+        top: 25%;
+        left: 4%;
+        grid-template-columns: 100px minmax(300px, 80vw);
+        gap: 30px;
+    }
+    #testimonio >.img-fondo > .base-info > .datos{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(280px, 45%));
+        gap: 25px;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .opinion-item > .opinion{
+        font-size: 22px;
+        text-align: justify;
+        line-height: 40px;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .opinion-item > .firma{
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+    #testimonio >.img-fondo > .base-info > .datos > .columna2 > .opinion-item > .origen{
+        font-size: 18px;
+        margin-top: -20px;
+        font-style: italic;
+        font-weight: 600;
+    }
+    #contacto >.img-fondo > .base-info > .datos {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form >.row > .col >.form-control,
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > input,
+    #contacto >.img-fondo > .base-info > .datos > .formulario > form > .form-group > textarea{
+        background-color: var(--background-inputs);
+        border: none;
+        font-size: 15px;
+        color: gray;
+    }
+}
+@media screen and (min-width: 1525px) {
+    #servicios > .img-fondo > .base-info{
+        top: 20vh;
+        left: 4%;
+        grid-template-columns: 100px minmax(250px, 600px) minmax(300px, 650px);
+        gap: 40px;
+    }
+    #servicios >.img-fondo > .base-info > .tiempo > img{
+        width: 90%;
+        height: 450px;/*  DEBE CAMBIARSE */
+    }
+    
+}
+@media screen and (min-width: 1625px) {
+    #empresas >.img-fondo > .base-info > .datos{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 300px));
+        gap: 30px;
+    }
 }
